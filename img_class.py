@@ -4,7 +4,7 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras.models import load_model
-from keras.preprocessing.image import load_img
+from tensorflow.keras.utils import load_img
 from keras import backend as K
 import numpy as np
 
@@ -70,4 +70,3 @@ model.fit_generator(
 	validation_data=validation_generator,
 	validation_steps=nb_validation_samples // batch_size)
 model.save('model_saved.h5')
-
